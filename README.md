@@ -10,3 +10,6 @@ side bar on right for pop-outs and line charts
 
 
 Boot Lake
+
+Abstract: Use project proposal
+Put this code in our project repository
