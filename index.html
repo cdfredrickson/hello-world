@@ -104,11 +104,10 @@ p { margin: 0 0 10px 0; }
       }))
       .append("g")
 
-    svg.append("circle")
-      .attr("cx", document.body.clientWidth / 2)
-      .attr("cy", document.body.clientHeight / 2)
-      .attr("r", 500)
-      .style("fill", "#B8DEE6")
+    svg.append("image")
+      .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
+      .attr("x", document.body.clientWidth / 2)
+      .attr("y", document.body.clientHeight / 2)
 
   </script>
   
