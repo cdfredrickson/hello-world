@@ -7,3 +7,6 @@ https://cdfredrickson.github.io/hello-world/
 
 Extensions for line chart: png and svg, need what lake it is
 side bar on right for pop-outs and line charts
+
+
+Boot Lake
