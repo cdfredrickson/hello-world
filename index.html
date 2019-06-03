@@ -91,54 +91,25 @@ p { margin: 0 0 10px 0; }
   </div>
  </div>
   
-  <svg width="600" height="600">
-  <g>
-    <image xlink:href="https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png" x="0" y="0" width="800"></image>
-  </g>
-</svg>
-  
   <script>
     // Feel free to change or delete any of the code you see in this editor!
-    
-    var zoom = d3.zoom().on("zoom", zoomed),
-    svg = d3.select("svg").call(zoom),
-    g = svg.select("g"),
-    image = g.select("image"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    x0 = +image.attr("x"),
-    y0 = +image.attr("y"),
-    x1 = +image.attr("width") + x0,
-    y1 = +image.attr("height") + y0;
-
-// Don’t allow the zoomed area to be bigger than the viewport.
-zoom.scaleExtent([1, Math.min(width / (x1 - x0), height / (y1 - y0))]);
-
-function zoomed() {
-  var t = d3.event.transform;
-  if (t.invertX(0) > x0) t.x = -x0 * t.k;
-  else if (t.invertX(width) < x1) t.x = width - x1 * t.k;
-  if (t.invertY(0) > y0) t.y = -y0 * t.k;
-  else if (t.invertY(height) < y1) t.y = height - y1 * t.k;
-  g.attr("transform", t);
-}
    
-//    var svg = d3.select("body")
-//      .append("svg")
-//      .attr("width", 600)
-//      .attr("height", 600)
-//      .call(d3.zoom()
-//              .scaleExtent([1,25])
-//              .on("zoom", function () {
-//              svg.attr("transform", d3.event.transform)
-//      }))
-//      .append("g")
+    var svg = d3.select("body")
+      .append("svg")
+      .attr("width", 600)
+      .attr("height", 600)
+      .call(d3.zoom()
+              .scaleExtent([1,25])
+              .on("zoom", function () {
+              svg.attr("transform", d3.event.transform)
+      }))
+      .append("g")
 
-//    svg.append("image")
-//      .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
-//      .attr("x", 0)
-//      .attr("y", 0)
-//      .attr('width',800)
+    svg.append("image")
+      .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr('width',800)
      // .attr("x", document.body.clientWidth / 2)
      // .attr("y", document.body.clientHeight / 2)
 
