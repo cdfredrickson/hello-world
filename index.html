@@ -122,26 +122,26 @@ function zoomed() {
   else if (t.invertY(height) < y1) t.y = height - y1 * t.k;
   g.attr("transform", t);
 }
-<!--    
-    var svg = d3.select("body")
-      .append("svg")
-      .attr("width", 600)
-      .attr("height", 600)
-      .call(d3.zoom()
-              .scaleExtent([1,25])
-              .on("zoom", function () {
-              svg.attr("transform", d3.event.transform)
-      }))
-      .append("g")
+   
+//    var svg = d3.select("body")
+//      .append("svg")
+//      .attr("width", 600)
+//      .attr("height", 600)
+//      .call(d3.zoom()
+//              .scaleExtent([1,25])
+//              .on("zoom", function () {
+//              svg.attr("transform", d3.event.transform)
+//      }))
+//      .append("g")
 
-    svg.append("image")
-      .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr('width',800)
+//    svg.append("image")
+//      .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
+//      .attr("x", 0)
+//      .attr("y", 0)
+//      .attr('width',800)
      // .attr("x", document.body.clientWidth / 2)
      // .attr("y", document.body.clientHeight / 2)
--->
+
   </script>
   
   // <br />
