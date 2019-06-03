@@ -93,12 +93,11 @@ p { margin: 0 0 10px 0; }
   
   <script>
     // Feel free to change or delete any of the code you see in this editor!
-    var width = 600, height = 600;
     
     var svg = d3.select("body")
       .append("svg")
-      .attr("width", width)
-      .attr("height", height)
+      .attr("width", 600)
+      .attr("height", 600)
       .call(d3.zoom()
               .scaleExtent([1,25])
               .on("zoom", function () {
