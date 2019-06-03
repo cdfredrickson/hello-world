@@ -111,6 +111,12 @@ p { margin: 0 0 10px 0; }
               svg.attr("transform", d3.event.transform)
       }))
       .append("g")
+    
+    var zoom = d3.zoom()
+              .scaleExtent([1,25])
+              .translateExtent([[0, 0], [widthMap + 90, heightMap + 100]])
+              .on("zoom", function () {
+              svg.attr("transform", d3.event.transform)
 
     svg.append("image")
       .attr('xlink:href', 'https://www.nasa.gov/sites/default/files/bit_depth_example_pics.png')
