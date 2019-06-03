@@ -90,7 +90,11 @@ p { margin: 0 0 10px 0; }
     <a href="http://www.washington.edu">University of Washington</a>
   </div>
  </div>
-  <button id="Reset">RESET</button>
+  
+  <button id="Reset">Reset Map</button>
+  
+  <br>
+  
   <script>
     // Feel free to change or delete any of the code you see in this editor!
     
@@ -155,6 +159,11 @@ p { margin: 0 0 10px 0; }
       .attr("y", 0)
       .attr("width", 150)
     }
+    
+    $("#Reset").click(() => {
+    svg.transition()
+    .duration(750)
+    .call(zoom.transform, d3.zoomIdentity);
 
   </script>
   
