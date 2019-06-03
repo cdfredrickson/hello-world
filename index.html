@@ -131,7 +131,7 @@ p { margin: 0 0 10px 0; }
       .append("g")
     
     svg2.append("rect")
-    .attr("width",500)
+    .attr("width",600)
     .attr("height",600)
     .style("fill", "#f45342")
     .attr("x", 0)
@@ -142,6 +142,13 @@ p { margin: 0 0 10px 0; }
       .attr('xlink:href', 'gifs/Lunar_libration_with_phase2.gif')
       .attr("x", 0)
       .attr("y", 0)
+      .attr("width", 300)
+      
+      svg2.append("image")
+      .attr('xlink:href', 'timeseries/ee-chart_boot_blue.svg')
+      .attr("x", 305)
+      .attr("y", 0)
+      .attr("width", 150)
     }
 
   </script>
