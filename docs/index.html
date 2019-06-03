@@ -142,7 +142,7 @@ p { margin: 0 0 10px 0; }
     .attr("y", 0)
     
     document.getElementById('Reset').addEventListener('click', () => {
-    svg.call(zoom.transform, d3.zoomIdentity.translate(0, 0).scale(1))
+    svg.call(d3.zoom().transform, d3.zoomIdentity.translate(0, 0).scale(1))
 });
  
     function addGIFandChart() {
